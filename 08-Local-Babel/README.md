@@ -8,7 +8,7 @@ npm install --save-dev @babel/core @babel/cli @babel/preset-react
 
 ## 3. Reconfigure for "scripts" on .babelrc
 
-## 4. Add Lite Serverrm .git/refs/heads/localbranch
+## 4. Add Lite Server
 
 npm add lite-server
 

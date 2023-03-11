@@ -1,28 +1,38 @@
-// const root = document.querySelector('#root');
-// const element = document.createElement('h1');
-// element.textContent = 'Hello, world!';
-// element.className = 'heading-1';
-// root.appendChild(element);
-
 const root = ReactDOM.createRoot(document.querySelector('#root'));
 
-function tick(){
-  const element = (
-    
-    // Basic Inline Style on React
-    <div style={{
-      width: '200px',
-      height: '200px',
-      backgroundColor: 'blue',
-    }}>
-    </div>
-    
+// Add External Stylesheet to React JS
+// const className = 'box';
+// const element = (
+//   <div className={className}></div>    
+// )
+
+// Add Event Handling
+// function clickMe(msg){
+//   alert(msg);
+// }
+// const element = (
+//   <button onClick={clickMe.bind(this, "Clicked!!!!!!!")}>Click Me</button> 
+// )
+
+// React Component and State
+// State is isolated data that cannot be accessed by other component
+// State data value is editable and will be re-rendered after detected any change
+function App(){
+  const [count, setCount] = React.useState(0); //  Initialize value with this
+  // By changing state value, page will be re-rendered
+
+  return (
+    <>
+      <button onClick={function(){
+        setCount(count - 1);
+      }}>-</button>
+      <span>&nbsp; {count} &nbsp;</span>
+      <button onClick={function(){
+        setCount(count + 1);
+      }}>+</button>
+    </>
   )
-  root.render(element);
 }
+root.render(<App />);
 
-tick();
-
-setInterval(function(){
-  tick();
-}, 1000)
+// root.render(element);
